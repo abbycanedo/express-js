@@ -57,8 +57,11 @@ sudo npm install --save stylus -g               # CSS pre-processer
 npm install react-tools --save-dev              # for React
 ```
 
-Setup nodemon. [via](https://github.com/remy/nodemon/issues/330).
-Setup stylus. [via](http://code.runnable.com/U_kP7TNQ2DxbGg7d/express-jade-stylus-demo-for-node-js).
+Setup nodemon ([via](https://github.com/remy/nodemon/issues/330)).
+
+Setup stylus ([via](http://code.runnable.com/U_kP7TNQ2DxbGg7d/express-jade-stylus-demo-for-node-js)).
+
+Setup react ([via](http://www.joshfinnie.com/blog/reactjs-tutorial-part-1/)).
 
 Run the server via ```nodemon server.js```.
 
