@@ -3,7 +3,9 @@ var React = require('react');
 module.exports = React.createClass({
   render: function() {
     return (
-    <h1>Hello World from a React.js Component!!</h1>
-    )
-}
+      <div className="commentForm">
+        <h4>Comment Form...</h4>
+      </div>
+    );
+  }
 });

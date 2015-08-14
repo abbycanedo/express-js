@@ -74,7 +74,7 @@ Run the server via ```nodemon server.js```.
 ## References
 ### Docs
 * [ExpressJS](http://expressjs.com/starter/hello-world.html): For serving frontend.
-* [Jade](http://jade-lang.com/tutorial/): Node template system that comes bundled with Express.
+* [Jade](http://jade-lang.com/reference/): Node template system that comes bundled with Express.
 * [Foundation Docs](http://foundation.zurb.com/docs/): documentation for Foundation.
 * [Stylus](https://learnboost.github.io/stylus/): CSS pre-processor.
 * [React Tutorial](http://facebook.github.io/react/docs/tutorial.html): React Tutorial from facebook.
@@ -82,7 +82,8 @@ Run the server via ```nodemon server.js```.
 ### Sublime Plugins
 
 If you're using Sublime Text, you can add the following plugins to make development easier for you:
-* Emmet (HTML/CSS snippets)
 * GitGutter (shows an icon in the gutter area indicating whether a line has been inserted, modified or deleted)
+* ExpressComplete (ExpressJS snippets)
+* Emmet (HTML/CSS snippets)
 * Babel (syntax highlighting for ES6 JavaScript with React JSX extensions)
 * Jade  (syntax highlighting for Jade)

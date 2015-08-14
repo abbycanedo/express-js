@@ -1,12 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300");
 @import url("http//fonts.googleapis.com/css?family=Quicksand");
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-a {
-  color: #00b7ff;
-}
 /* =========================================
    Typography
    =========================================
@@ -66,4 +59,16 @@ tr {
 .footer {
   margin-top: 66px;
   padding: 22px;
+}
+.indent {
+  margin-left: 20px;
+}
+.commentBox {
+  margin-left: 20px;
+}
+.commentList {
+  margin-left: 30px;
+}
+.commentForm {
+  margin-left: 30px;
 }

@@ -13,4 +13,8 @@ router.get('/react', function(req, res, next) {
   res.render('test/react', { title: 'Sample | React', app: 'Sample' });
 });
 
+router.get('/comments', function(req, res, next) {
+  res.render('test/comments', { title: 'Sample | React', app: 'Sample' });
+});
+
 module.exports = router;

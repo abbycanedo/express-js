@@ -2,11 +2,12 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/bower_components/foundation/css/normalize.min.css')
     link(rel='stylesheet', href='/bower_components/foundation/css/foundation.css')
     link(rel='stylesheet', href='/bower_components/fontawesome/css/font-awesome.css')
     link(rel='stylesheet', href='/stylesheets/app.css')
   body
+    include ./nav
     block content
-    //- script(src='/javascripts/build/react.min.js')
-    //- script(src='/javascripts/build/components/hello.js')
+
     script(src='/javascripts/build/app.js')
