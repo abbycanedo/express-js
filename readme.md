@@ -17,7 +17,7 @@ npm install -g nodemon
 npm install -g gulp
 ```
 
-And you're done! Run the server via ```nodemon server.js``` and hulp via ```gulp```. You can now access the app via ```localhost:3000``` with the following routes:
+And you're done! Run the server via ```nodemon server.js``` and gulp via ```gulp```. You can now access the app via ```localhost:3000``` with the following routes:
 
 * ```/```: default ExpressJS homepage.
 * ```/test```: test page for foundation and fontawesome.
@@ -71,6 +71,14 @@ Setup react and gulp tasks ([via](http://www.joshfinnie.com/blog/reactjs-tutoria
 
 Run the server via ```nodemon server.js```.
 
+## References
+### Docs
+* [ExpressJS](http://expressjs.com/starter/hello-world.html): For serving frontend.
+* [Jade](http://jade-lang.com/tutorial/): Node template system that comes bundled with Express.
+* [Foundation Docs](http://foundation.zurb.com/docs/): documentation for Foundation.
+* [Stylus](https://learnboost.github.io/stylus/): CSS pre-processor.
+* [React Tutorial](http://facebook.github.io/react/docs/tutorial.html): React Tutorial from facebook.
+
 ### Sublime Plugins
 
 If you're using Sublime Text, you can add the following plugins to make development easier for you:
@@ -78,12 +86,3 @@ If you're using Sublime Text, you can add the following plugins to make developm
 * GitGutter (shows an icon in the gutter area indicating whether a line has been inserted, modified or deleted)
 * Babel (syntax highlighting for ES6 JavaScript with React JSX extensions)
 * Jade  (syntax highlighting for Jade)
-
-### Browser Plugins
-
-* JSON Viewer: makes json readable on browsers
-* RESTClient: GUI for testing API (alternative to using curl)
-
-## References
-* [ExpressJS](http://expressjs.com/starter/hello-world.html): For serving frontend.
-* [Jade](http://jade-lang.com/tutorial/): Node template system that comes bundled with Express.
