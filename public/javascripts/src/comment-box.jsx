@@ -19,6 +19,26 @@ module.exports = React.createClass({
     });
   },
 
+  handleCommentSubmit: function(comment) {
+    var comments = this.state.data;
+    var newComments = comments.concat([comment]);
+    this.setState({data: newComments});
+
+    // $.ajax({
+    //   url: ????,
+    //   dataType: 'json',
+    //   type: 'POST',
+    //   data: comment,
+    //   success: function(data) {
+    //     console.log("Comment successfully sent to server.");
+    //     this.setState({data: data});
+    //   }.bind(this),
+    //   error: function(xhr, status, err) {
+    //     console.error(this.props.url, status, err.toString());
+    //   }.bind(this)
+    // });
+  },
+
   getInitialState: function(){
     console.log(this.props.url);
     return {data: []};
@@ -32,10 +52,10 @@ module.exports = React.createClass({
   render: function() {
     console.log(this.state.data);
     return (
-      <div className="commentBox">
+      <div className="commentBox row">
         <h2>Comments</h2>
         <CommentList data={this.state.data} />
-        <CommentForm />
+        <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
       </div>
     );
   }

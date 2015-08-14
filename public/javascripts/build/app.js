@@ -19847,6 +19847,26 @@ module.exports = React.createClass({displayName: "exports",
     });
   },
 
+  handleCommentSubmit: function(comment) {
+    var comments = this.state.data;
+    var newComments = comments.concat([comment]);
+    this.setState({data: newComments});
+
+    // $.ajax({
+    //   url: ????,
+    //   dataType: 'json',
+    //   type: 'POST',
+    //   data: comment,
+    //   success: function(data) {
+    //     console.log("Comment successfully sent to server.");
+    //     this.setState({data: data});
+    //   }.bind(this),
+    //   error: function(xhr, status, err) {
+    //     console.error(this.props.url, status, err.toString());
+    //   }.bind(this)
+    // });
+  },
+
   getInitialState: function(){
     console.log(this.props.url);
     return {data: []};
@@ -19860,10 +19880,10 @@ module.exports = React.createClass({displayName: "exports",
   render: function() {
     console.log(this.state.data);
     return (
-      React.createElement("div", {className: "commentBox"}, 
+      React.createElement("div", {className: "commentBox row"}, 
         React.createElement("h2", null, "Comments"), 
         React.createElement(CommentList, {data: this.state.data}), 
-        React.createElement(CommentForm, null)
+        React.createElement(CommentForm, {onCommentSubmit: this.handleCommentSubmit})
       )
     );
   }
@@ -19873,10 +19893,28 @@ module.exports = React.createClass({displayName: "exports",
 var React = require('react');
 
 module.exports = React.createClass({displayName: "exports",
+  handleSubmit: function(e) {
+    e.preventDefault();
+    var author = React.findDOMNode(this.refs.author).value.trim();
+    var text = React.findDOMNode(this.refs.text).value.trim();
+    if (!text || !author) {
+      return;
+    }
+  
+    this.props.onCommentSubmit({author: author, text: text});
+    React.findDOMNode(this.refs.author).value = '';
+    React.findDOMNode(this.refs.text).value = '';
+    return;
+  },
+
   render: function() {
     return (
       React.createElement("div", {className: "commentForm"}, 
-        React.createElement("h4", null, "Comment Form...")
+        React.createElement("form", {className: "commentForm", onSubmit: this.handleSubmit}, 
+          React.createElement("input", {type: "text", className: "large-6 columns", ref: "author", placeholder: "Your name"}), 
+          React.createElement("input", {type: "text", className: "large-6 columns", ref: "text", placeholder: "Say something..."}), 
+          React.createElement("input", {type: "submit", className: "button small radius", value: "Post"})
+        )
       )
     );
   }
