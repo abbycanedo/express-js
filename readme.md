@@ -10,13 +10,19 @@ npm install
 bower install
 ```
 
-The app uses nodemon to automatically restart the server, so install that as well.
+The app uses nodemon to automatically restart the server, and gulp to build an watch our ```.jsx``` files. So install those as well.
 
 ```
 npm install -g nodemon
+npm install -g gulp
 ```
 
-And you're done! Run the server via ```nodemon server.js```.
+And you're done! Run the server via ```nodemon server.js``` and hulp via ```gulp```. You can now access the app via ```localhost:3000``` with the following routes:
+
+* ```/```: default ExpressJS homepage.
+* ```/test```: test page for foundation and fontawesome.
+* ```/test/stylus```: default test page for stylus.
+* ```/test/react```: test page for react.
 
 If you're interested in how to setup the app from scratch, proceed to the following section.
 
@@ -61,7 +67,7 @@ Setup nodemon ([via](https://github.com/remy/nodemon/issues/330)).
 
 Setup stylus ([via](http://code.runnable.com/U_kP7TNQ2DxbGg7d/express-jade-stylus-demo-for-node-js)).
 
-Setup react ([via](http://www.joshfinnie.com/blog/reactjs-tutorial-part-1/)).
+Setup react and gulp tasks ([via](http://www.joshfinnie.com/blog/reactjs-tutorial-part-2/)).
 
 Run the server via ```nodemon server.js```.
 
