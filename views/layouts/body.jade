@@ -6,8 +6,14 @@ html
     link(rel='stylesheet', href='/bower_components/foundation/css/foundation.css')
     link(rel='stylesheet', href='/bower_components/fontawesome/css/font-awesome.css')
     link(rel='stylesheet', href='/stylesheets/app.css')
+
+    script(src='/bower_components/modernizr/modernizr.js')
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/bower_components/foundation/js/foundation.min.js')
   body
     include ./nav
     block content
 
+    script.
+      $(document).foundation();
     script(src='/javascripts/build/app.js')

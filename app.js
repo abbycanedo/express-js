@@ -48,9 +48,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var routes = require('./routes/index');
 var test = require('./routes/test');
+var grid = require('./routes/grid');
 
 app.use('/', routes);
 app.use('/test', test);
+app.use('/grid', grid);
 
 /*
   ==================================================================

@@ -1,0 +1,63 @@
+extends ../layouts/body
+
+block content
+  header
+    .row.rect.marginb.bgwhite.padding-left
+      h1
+        | Header Title
+      h2.subheader
+        | Subtitle
+
+  section#carousel
+    .row.rect.marginb.text-center
+      h1
+        | Click the button!
+      a.button.radius(href="#", data-reveal-id="myModal")
+        | Click!
+
+  section
+    #about.row.marginb
+      .para.large-3.medium-6.columns
+        h1.title
+          | Title
+        p
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quae dignissimos, fugiat nesciunt ipsam earum corrupti iusto voluptatem aliquam fugit. Ea libero, quasi, ex numquam vitae provident natus voluptatibus placeat?
+      .para.large-3.medium-6.columns
+        h1.title
+          | Title
+        p
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quae dignissimos, fugiat nesciunt ipsam earum corrupti iusto voluptatem aliquam fugit. Ea libero, quasi, ex numquam vitae provident natus voluptatibus placeat?
+      .para.large-3.medium-6.columns
+        h1.title
+          | Title
+        p
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quae dignissimos, fugiat nesciunt ipsam earum corrupti iusto voluptatem aliquam fugit. Ea libero, quasi, ex numquam vitae provident natus voluptatibus placeat?
+      .para.large-3.medium-6.columns
+        h1.title
+          | Title
+        p
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quae dignissimos, fugiat nesciunt ipsam earum corrupti iusto voluptatem aliquam fugit. Ea libero, quasi, ex numquam vitae provident natus voluptatibus placeat?
+  
+  footer.footer
+    a(href="/user/#{id}")
+      .fa.fa-pencil
+      |  UP CSI
+
+  #myModal.reveal-modal.tiny(data-reveal='', aria-labelledby='modalTitle', aria-hidden='true', role='dialog')
+    a.close-reveal-modal(aria-label='Close') ×
+    h2#modalTitle.desc.text-center
+      | Awesome Form
+    form
+      .row
+        label
+          | Username
+        input#username(type="text", placeholder="jdcruz")
+        label
+          | Password
+        input#password(type="password", placeholder="********")
+        a#submit.button.radius(href="#")
+          | Submit
+
+
+
+  script(src="/javascripts/grid.js")
